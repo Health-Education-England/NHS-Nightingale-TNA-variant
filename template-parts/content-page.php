@@ -63,7 +63,7 @@
 <!--                </span>-->
 <!--            </summary>-->
 <!--            <div class="nhsuk-details__text">-->
-<!--                --><?php //nightingale_2_0_entry_footer(); ?>
+<!--                <?php //nightingale_2_0_entry_footer(); ?>-->
 <!--            </div>-->
 <!--        </details>-->
     </footer><!-- .entry-footer -->

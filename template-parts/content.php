@@ -31,8 +31,6 @@
             <?php endif; ?>
         </header><!-- .article-header -->
 
-        <?php nightingale_2_0_post_thumbnail(); ?>
-
         <article>
             <?php
             the_content( sprintf(
