@@ -1,0 +1,19 @@
+/*
+ Theme Name:   NHS TNA Theme
+ Theme URI:    http://nhstna.oneblackbear.com
+ Description:  TNA Theme for NHS
+ Author:       Michal Noskovic
+ Template:     nightingale-2-0
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Text Domain:  nhstna-theme
+*/
+
+.nhsuk-list {
+    margin-left: 0;
+}
+
+.nhsuk-grid-row hr:last-child {
+    display:none;
+}
