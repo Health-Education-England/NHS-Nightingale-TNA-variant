@@ -30,7 +30,7 @@ get_header();
                 endwhile; ?>
             </div>
 
-            <?php get_template_part('partials/feed-form'); ?>
+            <?php get_template_part('partials/feed'); ?>
         </main>
     </div>
 <?php
