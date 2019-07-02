@@ -17,3 +17,8 @@
 .nhsuk-grid-row hr:last-child {
     display:none;
 }
+
+.wp-block-embed__wrapper iframe {
+    width: 100%;
+    height: 400px;
+}
