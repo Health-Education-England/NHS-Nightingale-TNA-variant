@@ -81,10 +81,10 @@ get_header();
             <?php
                 include_once(get_stylesheet_directory() . '/functions/Feed.php');
                 $feed = new Feed();
-                $vacancies = $feed->importFeed();
+                $feed_vacancies = $feed->importFeed();
                 $homepage = true;
 
-                if ($vacancies && count($vacancies->vacancy_details)) :
+                if ($feed_vacancies && ($vacancies = $feed_vacancies->vacancy_details) && count($vacancies)) :
             ?>
             <div class="nhsuk-grid-row">
                 <div class="nhsuk-grid__item nhsuk-grid-column-full-width">
