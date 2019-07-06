@@ -17,7 +17,7 @@ export default function FeedListing(props) {
                         <h2 className="nhsuk-promo__heading">
                             {item.job_title + ' - ' + item.job_reference}
                         </h2>
-                        <div className="nhsuk-summary-list">
+                        <dl className="nhsuk-summary-list">
                             {attributes.map((attribute, key) => (
                                 <div
                                     key={key}
@@ -32,7 +32,7 @@ export default function FeedListing(props) {
                                     </dd>
                                 </div>
                             ))}
-                        </div>
+                        </dl>
                         <span className="nhsuk-button">Read more</span>
                         {/*<p class="nhsuk-promo__description">{item.job_description}</p>*/}
                     </div>
