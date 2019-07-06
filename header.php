@@ -23,6 +23,7 @@
     ?>/node_modules/nhsuk-frontend/packages/assets/favicons/apple-touch-icon.png">
     <link rel="icon" href="<?php echo get_bloginfo('template_directory');
     ?>/node_modules/nhsuk-frontend/packages/assets/favicons/favicon.png">
+    <meta name="theme-color" content="#005eb8">
 
     <?php wp_head(); ?>
 </head>
