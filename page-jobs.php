@@ -12,6 +12,10 @@
  * @package Nightingale_2.0
  */
 
+include_once(get_stylesheet_directory() . '/functions/Feed.php');
+$feed = new Feed();
+$vacancies = $feed->importFeed();
+
 get_header();
 ?>
     <div id="primary" class="nhsuk-width-container">
@@ -30,7 +34,12 @@ get_header();
                 endwhile; ?>
             </div>
 
-            <?php get_template_part('partials/feed'); ?>
+            <?php // get_template_part('partials/feed'); ?>
+            <div id="nhs-feed"></div>
+            <script>
+                window.NHS_FEED = <?php echo json_encode($vacancies->vacancy_details); ?>;
+            </script>
+            <?php assets_for_entrypoint('main', 'js')?>
         </main>
     </div>
 <?php
