@@ -9,8 +9,7 @@ export default function FeedForm(props) {
             {Object.entries(filters).map(([name, filter]) => (
                 <div key={name}
                      className="nhsuk-form-group">
-                    <fieldset className="nhsuk-fieldset"
-                              aria-describedby={'field_description_' + name}>
+                    <fieldset className="nhsuk-fieldset">
                         <legend className="nhsuk-fieldset__legend">
                             <strong>{filter.title}</strong>
                         </legend>
