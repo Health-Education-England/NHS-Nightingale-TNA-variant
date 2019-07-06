@@ -2,10 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import FeedForm from './FeedForm';
 import FeedListing from './FeedListing';
+import FeedPagination from './FeedPagination';
 
 export default function Feed(props) {
     const {
         filters,
+        pagination,
         items,
         onFiltersChange
     } = props;
@@ -19,10 +21,16 @@ export default function Feed(props) {
                 />
             </div>
             <div className="nhsuk-grid-column-two-thirds">
+                <FeedPagination pagination={pagination}
+                                onFiltersChange={onFiltersChange}
+                />
                 {items.map((item, key) => (
                     <FeedListing key={key}
                                  item={item} />
                 ))}
+                <FeedPagination pagination={pagination}
+                                onFiltersChange={onFiltersChange}
+                />
             </div>
         </div>
     );

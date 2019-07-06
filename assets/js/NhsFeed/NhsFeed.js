@@ -10,7 +10,7 @@ export default class NhsFeed extends Component {
             pagination: {
                 page: 1,
                 per_page: 5,
-                total_page: 0,
+                total_pages: 0,
             },
             filters: {
                 job_type: {
@@ -73,7 +73,7 @@ export default class NhsFeed extends Component {
     paginate(items, page, per_page) {
         const offset = (page - 1) * per_page;
         return {
-            total_pages: Math.ceil(this.props.feed.length / this.state.per_page),
+            total_pages: Math.ceil(this.props.feed.length / per_page),
             vacancies: items.slice(offset).slice(0, per_page),
         };
     }
