@@ -71,19 +71,22 @@ export default class NhsFeed extends Component {
     }
 
     paginate(items, page, per_page) {
-        const offset = (page - 1) * per_page;
+        const total_pages = Math.ceil(items.length / per_page),
+            offset = (page - 1) * per_page;
         return {
-            total_pages: Math.ceil(this.props.feed.length / per_page),
+            total_pages: total_pages,
             vacancies: items.slice(offset).slice(0, per_page),
         };
     }
 
     onFiltersChange(name, option, value) {
-        let { filters, pagination } = this.state;
+        let filtersChanged = false,
+            { filters, pagination } = this.state;
 
         if (name === 'pagination') {
             pagination[option] = value;
         } else {
+            filtersChanged = true,
             filters[name]['options'][option] = value;
             filters[name]['isSet'] = Object.entries(filters[name].options).reduce((set, optionMeta) => {
                 const [value, checked] = optionMeta;
@@ -113,6 +116,9 @@ export default class NhsFeed extends Component {
             return found;
         }) : this.props.feed;
 
+        if(filtersChanged){
+            pagination.page = 1;
+        }
         const { vacancies, total_pages } = this.paginate(filteredVacancies, pagination.page, pagination.per_page);
         pagination.total_pages = total_pages;
 

@@ -11,11 +11,14 @@ export default function FeedPagination(props) {
                         <li className="nhsuk-pagination-item--previous">
                             <a className="nhsuk-pagination__link nhsuk-pagination__link--prev"
                                href="#"
-                               onClick={() => onFiltersChange('pagination', 'page', pagination.page - 1)}
+                               onClick={(e) => {
+                                   e.preventDefault();
+                                   return onFiltersChange('pagination', 'page', pagination.page - 1);
+                               }}
                             >
                                 <span className="nhsuk-pagination__title">Previous</span>
                                 <span className="nhsuk-u-visually-hidden">:</span>
-                                <span className="nhsuk-pagination__page">Page {pagination.page - 1}</span>
+                                <span className="nhsuk-pagination__page">{`Page ${pagination.page - 1} of ${pagination.total_pages}`}</span>
                                 <svg className="nhsuk-icon nhsuk-icon__arrow-left" xmlns="http://www.w3.org/2000/svg"
                                      viewBox="0 0 24 24" aria-hidden="true">
                                     <path
@@ -28,10 +31,13 @@ export default function FeedPagination(props) {
                         <li className="nhsuk-pagination-item--next">
                             <a className="nhsuk-pagination__link nhsuk-pagination__link--next"
                                href="#"
-                               onClick={() => onFiltersChange('pagination', 'page', pagination.page + 1)}>
+                               onClick={(e) => {
+                                   e.preventDefault();
+                                   return onFiltersChange('pagination', 'page', pagination.page + 1);
+                               }}>
                                 <span className="nhsuk-pagination__title">Next</span>
                                 <span className="nhsuk-u-visually-hidden">:</span>
-                                <span className="nhsuk-pagination__page">Page {pagination.page + 1}</span>
+                                <span className="nhsuk-pagination__page">{`Page ${pagination.page + 1} of ${pagination.total_pages}`}</span>
                                 <svg className="nhsuk-icon nhsuk-icon__arrow-right" xmlns="http://www.w3.org/2000/svg"
                                      viewBox="0 0 24 24" aria-hidden="true">
                                     <path
