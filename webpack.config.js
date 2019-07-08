@@ -25,7 +25,7 @@ module.exports = (env, argv) => {
                             corejs: 3,
                             targets: {
                                 browsers: [
-                                    "> 1%"
+                                    "> 0.3%"
                                 ]
                             },
                         }],
@@ -49,6 +49,10 @@ module.exports = (env, argv) => {
             }),
             new ManifestPlugin(),
             new webpack.HashedModuleIdsPlugin(),
+            // new webpack.ProvidePlugin({
+            //     'Promise': 'exports?global.Promise!es6-promise',
+            //     'window.fetch': 'exports?self.fetch!whatwg-fetch',
+            // }),
         ]
     ;
 
