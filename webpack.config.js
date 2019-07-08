@@ -41,10 +41,6 @@ module.exports = (env, argv) => {
             }
         },
         plugins = [
-            new BundleAnalyzerPlugin({
-                generateStatsFile: true,
-                openAnalyzer: false,
-            }),
             new CleanWebpackPlugin(),
             new AssetsPlugin({
                 includeManifest: 'manifest',
@@ -58,6 +54,12 @@ module.exports = (env, argv) => {
 
     if (isProduction) {
         babelConfig.use.options.plugins.push("transform-react-remove-prop-types");
+    }
+    if (analyze) {
+        plugins.push(new BundleAnalyzerPlugin({
+            generateStatsFile: true,
+            openAnalyzer: false,
+        }));
     }
 
     return {
