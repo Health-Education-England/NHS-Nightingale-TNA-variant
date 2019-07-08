@@ -1,5 +1,4 @@
 <?php
-include_once(get_stylesheet_directory() . '/functions/Feed.php');
 $feed = new Feed();
 $feed_data = $feed->importFeed();
 $vacancies = $feed_data->vacancy_details;

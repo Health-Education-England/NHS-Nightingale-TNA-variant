@@ -79,7 +79,6 @@ get_header();
             <?php endif; wp_reset_query(); ?>
 
             <?php
-                include_once(get_stylesheet_directory() . '/functions/Feed.php');
                 $feed = new Feed();
                 $feed_vacancies = $feed->importFeed();
                 $homepage = true;
