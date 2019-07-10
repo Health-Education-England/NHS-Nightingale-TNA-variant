@@ -27,7 +27,10 @@
     display: none;
 }
 .nhsuk-checkboxes__item.checked label {
-    font-weight: bold;
+}
+
+.nhsuk-fieldset__legend {
+    margin-bottom: 0;
 }
 .nhsuk-footer__list-item-link,
 .rd .nhsuk-global-footer .menu-footer-links-container .menu li a{
