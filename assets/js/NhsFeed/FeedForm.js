@@ -38,7 +38,7 @@ export default class FeedForm extends Component {
             {Object.entries(this.state.filters).map(([name, filter]) => (
                 <fieldset key={name}
                     className="nhsuk-fieldset nhsuk-expander-group">
-                    <details className="nhsuk-details nhsuk-expander" open="open">
+                    <details className="nhsuk-details nhsuk-expander" open="">
                         <summary className="nhsuk-details__summary" role="button" aria-controls={"details-content-" + name}
                                  aria-expanded="true">
                             <legend className="nhsuk-fieldset__legend nhsuk-details__summary-text">{filter.title}</legend>
