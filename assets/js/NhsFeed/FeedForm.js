@@ -36,26 +36,26 @@ export default class FeedForm extends Component {
         return (
             <form action="#">
             {Object.entries(this.state.filters).map(([name, filter]) => (
-                <div key={name}
-                     className="nhsuk-form-group">
-                    <fieldset className="nhsuk-fieldset">
-                        <legend className="nhsuk-fieldset__legend">
-                            <strong>{filter.title}</strong>
-                        </legend>
-
-                        {name === 'job_employer' && (
-                            <span className="nhsuk-hint">
-                                <input type="text"
+                <fieldset key={name}
+                    className="nhsuk-fieldset nhsuk-expander-group">
+                    <details className="nhsuk-details nhsuk-expander" open="open">
+                        <summary className="nhsuk-details__summary" role="button" aria-controls={"details-content-" + name}
+                                 aria-expanded="true">
+                            <legend className="nhsuk-fieldset__legend nhsuk-details__summary-text">{filter.title}</legend>
+                        </summary>
+                        <div className="nhsuk-details__text" id={"details-content-" + name} aria-hidden="false">
+                            {name === 'job_employer' && (
+                                <span className="nhsuk-hint">
+                                    <input type="text"
                                        className="nhsuk-input"
                                        placeholder="Search"
                                        ref={this.job_employer_search}
                                        onChange={this.handleEmployerSearch}
-                                />
-                            </span>
-                        )}
-
-                        <div className="nhsuk-checkboxes">
-                            {Object.entries(filter.options).map(([option, checked], key) => (
+                                    />
+                                </span>
+                            )}
+                            <div className="nhsuk-checkboxes">
+                                {Object.entries(filter.options).map(([option, checked], key) => (
                                     <div key={name + key}
                                          className={`nhsuk-checkboxes__item ${!checked.show && !checked.checked ? 'hidden' : checked.checked ? 'checked' : ''}
                                     `}>
@@ -70,10 +70,11 @@ export default class FeedForm extends Component {
                                                htmlFor={name + key}
                                         >{option}</label>
                                     </div>
-                            ))}
+                                ))}
+                            </div>
                         </div>
-                    </fieldset>
-                </div>
+                    </details>
+                </fieldset>
             ))}
             </form>
         );
