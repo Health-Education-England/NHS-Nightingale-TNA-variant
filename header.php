@@ -30,6 +30,7 @@
 
 <body class="js-enabled">
 
+<?php // get_template_part('partials/cookie'); ?>
 
 <a class="skip-link screen-reader-text"
    href="#content"><?php esc_html_e('Skip to content', 'nightingale-2-0'); ?></a>
