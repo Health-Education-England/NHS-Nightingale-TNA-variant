@@ -21,9 +21,6 @@ export default function Feed(props) {
                 />
             </div>
             <div className="nhsuk-grid-column-two-thirds">
-                <FeedPagination pagination={pagination}
-                                onFiltersChange={onFiltersChange}
-                />
                 {!items.length && (
                     <div className="nhsuk-grid-column-full-width nhsuk-promo">
                         <a className="nhsuk-promo__link-wrapper"

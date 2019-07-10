@@ -134,6 +134,7 @@ export default class NhsFeed extends Component {
         let filtersChanged = false,
             { filters, pagination, feed } = this.state;
 
+        // filter or paginate
         if (name === 'pagination') {
             pagination[option] = value;
         } else {
