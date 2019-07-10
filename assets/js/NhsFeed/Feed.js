@@ -24,6 +24,17 @@ export default function Feed(props) {
                 <FeedPagination pagination={pagination}
                                 onFiltersChange={onFiltersChange}
                 />
+                {!items.length && (
+                    <div className="nhsuk-grid-column-full-width nhsuk-promo">
+                        <a className="nhsuk-promo__link-wrapper"
+                           href="/contact/"
+                        >
+                            <div className="nhsuk-promo__content">
+                                We're sorry but there aren't any vacancies that match your criteria at the moment. You can try a different search or register your interest in a specific role on our <span>contact us</span> page.
+                            </div>
+                        </a>
+                    </div>
+                )}
                 {items.map((item, key) => (
                     <FeedListing key={key}
                                  item={item} />
