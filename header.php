@@ -16,13 +16,13 @@
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="https://gmpg.org/xfn/11">
-    <script src="<?php echo get_bloginfo('template_directory'); ?>/node_modules/nhsuk-frontend/dist/nhsuk.min.js"
+    <script src="<?php echo get_stylesheet_directory(); ?>/nhsuk-frontend/nhsuk.min.js"
             defer></script>
     <link href="<?php echo get_bloginfo('template_directory'); ?>/style.css" rel="stylesheet">
-    <link rel="apple-touch-icon" href="<?php echo get_bloginfo('template_directory');
-    ?>/node_modules/nhsuk-frontend/packages/assets/favicons/apple-touch-icon.png">
-    <link rel="icon" href="<?php echo get_bloginfo('template_directory');
-    ?>/node_modules/nhsuk-frontend/packages/assets/favicons/favicon.png">
+    <link rel="apple-touch-icon" href="<?php echo get_stylesheet_directory();
+    ?>/nhsuk-frontend/favicons/apple-touch-icon.png">
+    <link rel="icon" href="<?php echo get_stylesheet_directory();
+    ?>/nhsuk-frontend/favicons/favicon.png">
     <meta name="theme-color" content="#005eb8">
 
     <?php wp_head(); ?>
