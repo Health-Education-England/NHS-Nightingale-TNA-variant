@@ -2,8 +2,8 @@
 
 include('functions/assets.php');
 include('functions/setup.php');
-include('functions/breadcrumbs.php');
-include('functions/feed.php');
+// include('functions/breadcrumbs.php');
+include('functions/Feed.php');
 
 function fetchVacancies(){
         $feed = new Feed();
