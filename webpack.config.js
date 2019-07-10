@@ -5,6 +5,7 @@ const path = require('path'),
     AssetsPlugin = require('assets-webpack-plugin'),
     ManifestPlugin = require('webpack-manifest-plugin')
 ;
+
 module.exports = (env, argv) => {
 
     const
@@ -41,7 +42,9 @@ module.exports = (env, argv) => {
             }
         },
         plugins = [
-            new CleanWebpackPlugin(),
+            new CleanWebpackPlugin({
+                cleanOnceBeforeBuildPatterns: ['**/*', '!.gitkeep'],
+            }),
             new AssetsPlugin({
                 includeManifest: 'manifest',
                 filename: './dist/entrypoints.json',
