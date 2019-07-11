@@ -9,6 +9,13 @@
  Text Domain:  nhstna-theme
 */
 
+#primary {
+    margin-top: 56px;
+}
+.nhsuk-grid__item {
+    margin-bottom: 56px;
+}
+
 .nhsuk-list {
     margin-left: 0;
 }
