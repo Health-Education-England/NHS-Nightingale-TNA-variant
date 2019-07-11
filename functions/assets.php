@@ -1,31 +1,27 @@
 <?php
 
-/**
- * Scripts and stylesheets
- *
- * Enqueue stylesheets in the following order:
- * 1. /theme/dist/styles/main.css - meh
- *
- * Enqueue scripts in the following order:
- * 2. /theme/dist/scripts/main.js
- */
-class JsonManifest {
-    private $manifest;
 
-    public function __construct( $manifest_path ) {
-        if ( file_exists( $manifest_path ) ) {
-            $this->manifest = json_decode( file_get_contents( $manifest_path ), true );
+class EntriesJson {
+    private $entryPoints;
+
+    public function __construct( $path ) {
+        if ( file_exists( $path ) ) {
+            $this->entryPoints = json_decode( file_get_contents( $path ), true );
         } else {
-            $this->manifest = [];
+            $this->entryPoints = [];
         }
     }
 
     public function get() {
-        return $this->manifest;
+        return $this->entryPoints;
+    }
+
+    public function remove($entry, $type, $key) {
+        unset($this->entryPoints[$entry][$type][$key]);
     }
 
     public function getPath( $key = '', $default = null ) {
-        $collection = $this->manifest;
+        $collection = $this->entryPoints;
         if ( is_null( $key ) ) {
             return $collection;
         }
@@ -49,11 +45,16 @@ function assets_for_entrypoint($name, $type) {
     static $entrypoints;
 
     if ( empty( $entrypoints ) ) {
-        $entrypoints = new JsonManifest( get_stylesheet_directory() . '/dist/entrypoints.json' );
+        $entrypoints = new EntriesJson( get_stylesheet_directory() . '/dist/entrypoints.json' );
     }
-
     foreach($entrypoints->get()[$name][$type] as $file) {
-        // wp_enqueue_style( 'nhs_css', asset_path( 'styles/main.css' ), false, null );
+        foreach($entrypoints->get() as $entry=>$entrypoint){
+            foreach($entrypoint[$type] as $key=>$otherFile) {
+                if($otherFile == $file){
+                    $entrypoints->remove($entry, $type, $key);
+                }
+            }
+        }
         echo "<script src=" . $dist_path . $file ."></script>";
     }
 }
