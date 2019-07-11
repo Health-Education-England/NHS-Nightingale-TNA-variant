@@ -15,14 +15,33 @@ get_header();
                 <div class="nhsuk-grid__item nhsuk-grid-column-full-width">
                     <div class="nhsuk-grid-row">
 
+                        <?php
+                            global $wp;
+                            $hasPage = false;
+                            $post = get_page_by_path($wp->request);
+                            if ($post && $post->post_status == 'publish') {
+                                setup_postdata($post);
+                                $hasPage = true;
+                                ?>
+                                <header class="page-header">
+                                    <h1 class="page-title"><?php the_title(); ?></h1>
+                                    <div class="archive-description"><?php the_content(); ?></div>
+                                </header><!-- .page-header -->
+                                <?php
+                                wp_reset_postdata();
+                            }
+                        ?>
+
                         <?php if ( have_posts() ) : ?>
 
+                            <?php if(!$hasPage) : ?>
                             <header class="page-header">
                                 <?php
                                 the_archive_title( '<h1 class="page-title">', '</h1>' );
                                 the_archive_description( '<div class="archive-description">', '</div>' );
                                 ?>
                             </header><!-- .page-header -->
+                            <?php endif; ?>
 
                             <?php
                             /* Start the Loop */
@@ -40,9 +59,9 @@ get_header();
 
                             nightingale_pagination();
 
-                        else :
+                        // else :
 
-                            get_template_part( 'template-parts/content', 'none' );
+                        //     get_template_part( 'template-parts/content', 'none' );
 
                         endif;
                         ?>
