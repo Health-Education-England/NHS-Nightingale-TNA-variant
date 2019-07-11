@@ -51,7 +51,12 @@
     }
 }
 
+.nhsuk-promo__link-wrapper {
+    width: 100%;
+}
 
+
+/* COOKIE BANNER */
 #nhsuk-cookie-banner {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
