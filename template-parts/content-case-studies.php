@@ -1,5 +1,4 @@
 <?php if (is_archive()): ?>
-<div class="nhsuk-grid-row">
     <?php if (has_post_thumbnail()): ?>
         <div class="nhsuk-grid-column-one-third">
             <?php the_post_thumbnail(); ?>
@@ -20,8 +19,7 @@
             </a>
         </div>
     </div>
-</div>
-<hr>
+
 <?php else :
     get_template_part( 'template-parts/content' );
 endif; ?>
