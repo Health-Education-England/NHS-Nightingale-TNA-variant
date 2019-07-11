@@ -73,8 +73,8 @@ module.exports = (env, argv) => {
         mode: isProduction ? 'production' : 'development',
         context: path.resolve(__dirname),
         entry: {
-            main: [
-                './assets/js/index.js'
+            vacancyFeed: [
+                './assets/js/vacancy.js',
             ],
         },
         output: {

@@ -40,7 +40,7 @@ get_header();
                     nonce: "<?php echo wp_create_nonce(); ?>",
                 };
             </script>
-            <?php assets_for_entrypoint('main', 'js')?>
+            <?php assets_for_entrypoint('vacancyFeed', 'js')?>
         </main>
     </div>
 <?php
