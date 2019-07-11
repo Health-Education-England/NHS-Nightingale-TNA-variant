@@ -76,6 +76,9 @@ module.exports = (env, argv) => {
             vacancyFeed: [
                 './assets/js/vacancy.js',
             ],
+            cookieNotice: [
+                './assets/js/cookie.js',
+            ],
         },
         output: {
             path: path.resolve(__dirname, './dist'),
