@@ -54,17 +54,31 @@ get_header();
                 <?php endif; ?>
             </div>
 
-            <div class="nhsuk-grid-row">
-                <div class="nhsuk-grid__item nhsuk-grid-column-full-width">
-                    <div class="nhsuk-warning-callout">
-                        <h3 class="nhsuk-warning-callout__label">School, nursery or work</h3>
-                        <p>
-                            <a href="" class="nhsuk-button nhsuk-button--secondary" style="float:right;">Register</a>
-                            Stay away from school, nursery or work until all the spots have crusted over. This is usually 5 days after the spots first appeared.
-                        </p>
+            <?php
+                $message_content = get_field('message_content');
+                if($message_content) :
+                    $message_title = get_field('message_title');
+                    $message_url = get_field('message_url');
+                    $message_button = get_field('message_button');
+            ?>
+                <div class="nhsuk-grid-row">
+                    <div class="nhsuk-grid__item nhsuk-grid-column-full-width">
+                        <div class="nhsuk-warning-callout">
+                            <?php if ($message_title) :?>
+                                <h3 class="nhsuk-warning-callout__label">
+                                    <?php echo $message_title; ?>
+                                </h3>
+                            <?php endif; ?>
+                            <?php if ($message_url) :?>
+                                <a href="<?php echo $message_url; ?>" class="nhsuk-button nhsuk-button--secondary" style="float:right;margin-top: 55px;">
+                                    <?php echo $message_button ? : 'Read more'; ?>
+                                </a>
+                            <?php endif?>
+                            <?php echo $message_content; ?>
+                        </div>
                     </div>
                 </div>
-            </div>
+            <?php endif; ?>
 
             <?php query_posts('post_type=faqs');
                 if ( have_posts() ) : ?>
