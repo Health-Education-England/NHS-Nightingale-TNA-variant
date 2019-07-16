@@ -18,7 +18,7 @@
 get_header();
 ?>
     <div id="primary" class="nhsuk-width-container">
-        <main id="maincontent" class="nhsuk-main-wrapper">
+        <main id="maincontent" class="nhsuk-main-wrapper nhs-feed-wrapper">
             <?php while (have_posts()) :
                 the_post();
 
@@ -32,7 +32,7 @@ get_header();
             endwhile; ?>
 
             <?php // get_template_part('partials/feed'); ?>
-            <div id="nhs-feed"></div>
+            <div id="nhs-feed" class="loading"></div>
             <script>
                 window.FEED = {
                     url: "<?php echo admin_url( 'admin-ajax.php' ); ?>",

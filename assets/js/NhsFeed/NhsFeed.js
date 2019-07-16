@@ -7,6 +7,7 @@ export default class NhsFeed extends Component {
         super(props);
 
         this.state = {
+            loaded: false,
             pagination: {
                 page: 1,
                 per_page: 5,
@@ -80,6 +81,7 @@ export default class NhsFeed extends Component {
 
             pagination.total_pages = total_pages;
             this.setState({
+                loaded: true,
                 pagination: pagination,
                 filters: filters,
                 items: vacancies,
@@ -184,12 +186,16 @@ export default class NhsFeed extends Component {
     }
 
     render() {
-        return (
-            <Feed
-                {...this.state}
-                onFiltersChange={this.onFiltersChange}
-            />
-        );
+        if(!this.state.loaded) {
+            return null;
+        } else {
+            return (
+                <Feed
+                    {...this.state}
+                    onFiltersChange={this.onFiltersChange}
+                />
+            );
+        }
     }
 }
 

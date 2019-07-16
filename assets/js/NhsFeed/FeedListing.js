@@ -3,7 +3,14 @@ import PropTypes from "prop-types";
 
 export default function FeedListing(props) {
     const { item } = props;
-    const attributes = ["job_type", "job_salary", "job_location", "job_staff_group", "job_employer"];
+    const attributes = {
+        job_type: 'Type',
+        job_salary: 'Salary',
+        job_location: 'Location',
+        job_staff_group: 'Staff group',
+        job_employer: 'Employer',
+        job_closedate: 'Close date',
+    };
 
     return (
         <div className="nhsuk-grid-column-full-width nhsuk-promo"
@@ -17,17 +24,16 @@ export default function FeedListing(props) {
                         {item.job_title + ' - ' + item.job_reference}
                     </h2>
                     <dl className="nhsuk-summary-list">
-                        {attributes.map((attribute, key) => (
+                        {Object.entries(attributes).map(([name, title], key) => (
                             <div
                                 key={key}
                                 className="nhsuk-summary-list__row"
                             >
-                                <dt className="nhsuk-summary-list__key"
-                                    style={{textTransform: 'capitalize'}}>
-                                    {attribute.replace('job_','').replace('_',' ')}
+                                <dt className="nhsuk-summary-list__key">
+                                    {title}
                                 </dt>
                                 <dd className="nhsuk-summary-list__value">
-                                    {item[attribute]}
+                                    {item[name]}
                                 </dd>
                             </div>
                         ))}
