@@ -9,8 +9,7 @@
 
 get_header();
 ?>
-    <div id="primary" class="nhsuk-width-container">
-        <main id="maincontent" class="nhsuk-main-wrapper nhsuk-grid-row">
+    <div id="primary" class=" nhsuk-grid-row">
             <div class="nhsuk-grid__item nhsuk-grid-column-full">
                 <?php
                     global $wp;
@@ -57,7 +56,6 @@ get_header();
                         ?>
                     </div><hr/>
                     <?php
-
                     endwhile;
 
                     nightingale_pagination();
@@ -69,7 +67,6 @@ get_header();
                 endif;
                 ?>
             </div>
-        </main><!-- #main -->
     </div><!-- #primary -->
 
 <?php

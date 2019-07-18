@@ -12,13 +12,9 @@
  * @package Nightingale_2.0
  */
 
-// $feed = new Feed();
-// $vacancies = $feed->importFeed();
-
 get_header();
 ?>
-    <div id="primary" class="nhsuk-width-container">
-        <main id="maincontent" class="nhsuk-main-wrapper nhs-feed-wrapper">
+    <div id="primary" class=" nhsuk-grid-row nhs-feed-wrapper">
             <?php while (have_posts()) :
                 the_post();
 
@@ -41,7 +37,7 @@ get_header();
                 };
             </script>
             <?php assets_for_entrypoint('vacancyFeed', 'js')?>
-        </main>
+
     </div>
 <?php
 get_footer();
