@@ -186,6 +186,7 @@ export default class NhsFeed extends Component {
     }
 
     render() {
+        // render empty before feed is loaded for the spinner to show
         if(!this.state.loaded) {
             return null;
         } else {
