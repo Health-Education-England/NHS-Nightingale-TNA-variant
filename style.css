@@ -9,9 +9,7 @@
  Text Domain:  nhstna-theme
 */
 
-#primary {
-    margin-top: 56px;
-}
+
 .nhsuk-grid__item {
     margin-bottom: 56px;
 }
@@ -79,6 +77,15 @@ details .nhsuk-checkboxes__input + .nhsuk-checkboxes__label::after{
     100% {
         transform: rotate(360deg);
     }
+}
+
+.nhsuk-header__transactional-service-name--link {
+    display: block;
+}
+.nhsuk-logo.nhsuk-logo--hee {
+    width: auto;
+    height: 32px;
+    display: block;
 }
 
 
