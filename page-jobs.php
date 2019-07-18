@@ -15,6 +15,7 @@
 get_header();
 ?>
     <div id="primary" class=" nhsuk-grid-row nhs-feed-wrapper">
+        <div class="nhsuk-grid-column-full">
             <?php while (have_posts()) :
                 the_post();
 
@@ -37,7 +38,7 @@ get_header();
                 };
             </script>
             <?php assets_for_entrypoint('vacancyFeed', 'js')?>
-
+        </div>
     </div>
 <?php
 get_footer();
