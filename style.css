@@ -100,7 +100,15 @@ details .nhsuk-checkboxes__input + .nhsuk-checkboxes__label::after{
     line-height: 1em;
     margin-top: 5px;
 }
+.nhsuk-header--transactional .nhsuk-header__transactional-service-name {
+    padding-top: 43px;
+}
 
+@media (max-width: 1024px) {
+    .nhsuk-header--transactional .nhsuk-header__transactional-service-name {
+        display: none;
+    }
+}
 
 
 /* COOKIE BANNER */

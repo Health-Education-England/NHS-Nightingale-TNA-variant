@@ -23,6 +23,11 @@
             <span class="nhsuk-logo__tagline"><?php echo get_bloginfo( 'description' ); ?></span>
         </a>
     </div>
+    <div class="nhsuk-header__transactional-service-name">
+        <a class="nhsuk-header__transactional-service-name--link" href="/" title="<?php echo get_bloginfo( 'name' ); ?>">
+            <?php echo get_bloginfo( 'name' ); ?>
+        </a>
+    </div>
     <div class="nhsuk-header__content" id="content-header">
 
         <div class="nhsuk-header__menu">
