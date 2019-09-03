@@ -1,15 +1,5 @@
 
 <div class="nhsuk-width-container nhsuk-header__container">
-    <!-- to be made a toggleable area, thinking white stripe with organisation logo...?
-        <div
-        class="nhsuk-header__logo">
-            <a class="nhsuk-header__link" href="/" aria-label="NHS homepage">
-                <?php
-    the_custom_logo();
-    $nightingale_2_0_description = get_bloginfo('description', 'display');
-    ?>
-            </a>
-        </div> -->
 
     <div class="nhsuk-header__logo">
         <a class="nhsuk-header__link" href="/" aria-label="NHS homepage">
@@ -21,11 +11,7 @@
                 <image src="https://assets.nhs.uk/images/nhs-logo.png" xlink:href=""></image>
             </svg>
             <span class="nhsuk-logo__tagline"><?php echo get_bloginfo( 'description' ); ?></span>
-        </a>
-    </div>
-    <div class="nhsuk-header__transactional-service-name">
-        <a class="nhsuk-header__transactional-service-name--link" href="/" title="<?php echo get_bloginfo( 'name' ); ?>">
-            <?php echo get_bloginfo( 'name' ); ?>
+            <span class="nhsuk-logo__tagline nhsuk-logo__nameline"><?php echo get_bloginfo( 'name' ); ?></span>
         </a>
     </div>
     <div class="nhsuk-header__content" id="content-header">
