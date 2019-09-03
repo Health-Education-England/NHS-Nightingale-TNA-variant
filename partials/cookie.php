@@ -8,5 +8,3 @@
         </div>
     </div>
 </div>
-
-<?php assets_for_entrypoint('cookieNotice','js') ?>

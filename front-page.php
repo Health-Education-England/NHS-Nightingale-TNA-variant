@@ -75,8 +75,7 @@ get_header();
         <?php endif; wp_reset_query(); ?>
 
         <?php
-            $feed = new Feed();
-            $feed_vacancies = $feed->importFeed();
+            $feed_vacancies = _fetchVacancies();
             $homepage = true;
 
             if ($feed_vacancies && ($vacancies = $feed_vacancies->vacancy_details) && count($vacancies)) :

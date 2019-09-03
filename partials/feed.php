@@ -1,6 +1,5 @@
 <?php
-$feed = new Feed();
-$feed_data = $feed->importFeed();
+$feed_data = _fetchVacancies();
 $vacancies = $feed_data->vacancy_details;
 
 $filters = [

@@ -29,15 +29,7 @@ get_header();
             endwhile; ?>
 
             <?php // get_template_part('partials/feed'); ?>
-            <div id="nhs-feed" class="loading"></div>
-            <script>
-                window.FEED = {
-                    url: "<?php echo admin_url( 'admin-ajax.php' ); ?>",
-                    action: "fetchVacancies",
-                    nonce: "<?php echo wp_create_nonce(); ?>",
-                };
-            </script>
-            <?php assets_for_entrypoint('vacancyFeed', 'js')?>
+            <?php echo do_shortcode('[nhsjobfeed]'); ?>
         </div>
     </div>
 <?php
