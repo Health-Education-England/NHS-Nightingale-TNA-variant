@@ -9,6 +9,16 @@
  Text Domain:  nhstna-theme
 */
 
+.homepage-vacancies .nhsuk-summary-list__row {
+    display: block;
+}
+.homepage-vacancies .nhsuk-summary-list__row dt,
+.homepage-vacancies .nhsuk-summary-list__row dd {
+    width: 100%;
+    display: block;
+    padding-left: 0;
+    padding-right: 0;
+}
 
 .nhsuk-grid__item {
     margin-bottom: 56px;
@@ -19,7 +29,14 @@
 }
 
 .nhsuk-grid-row hr:last-child {
-    display:none;
+    display: none;
+}
+
+section.nhsuk-grid-row{
+    padding-top: 56px;
+}
+section.nhsuk-grid-row.white-row{
+    background: #fff;
 }
 
 .wp-block-embed__wrapper iframe {
@@ -84,6 +101,7 @@ details .nhsuk-checkboxes__input + .nhsuk-checkboxes__label::after{
     text-decoration: none;
     width: auto;
     height: auto;
+    display: inline-block;
 }
 .nhsuk-header--transactional .nhsuk-logo {
     display: block;
