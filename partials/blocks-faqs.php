@@ -4,7 +4,7 @@
  */
 ?>
 
-<details class="nhsuk-details nhsuk-grid-column-full">
+<details class="nhsuk-details">
     <summary class="nhsuk-details__summary">
         <span class="nhsuk-details__summary-text"><?php the_title(); ?></span>
     </summary>
