@@ -14,20 +14,13 @@
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="https://gmpg.org/xfn/11">
-    <script src="<?php echo get_stylesheet_directory_uri(); ?>/nhsuk-frontend/nhsuk.min.js" defer></script>
-    <link href="<?php echo get_bloginfo('template_directory'); ?>/style.css" rel="stylesheet">
-    <link rel="apple-touch-icon" href="<?php echo get_stylesheet_directory_uri();?>/nhsuk-frontend/favicons/apple-touch-icon.png">
-    <link rel="icon" href="<?php echo get_stylesheet_directory_uri();?>/nhsuk-frontend/favicons/favicon.png">
-
     <meta name="theme-color" content="#005eb8">
 
+    <link href="<?php echo get_bloginfo('template_directory'); ?>/style.css" rel="stylesheet">
 
     <?php wp_head(); ?>
 </head>
 <body class="js-enabled">
-
-<?php get_template_part('partials/cookie'); ?>
-
 <a class="skip-link screen-reader-text"
        href="#content"><?php esc_html_e('Skip to content', 'nightingale-2-0'); ?></a>
 <?php if (get_theme_mod('emergency_on') == 'yes') {
@@ -37,7 +30,7 @@
 <header class="nhsuk-header nhsuk-header--transactional">
         <?php
         $header_layout = get_theme_mod('header_styles', 'normal');
-        get_template_part('partials/header_'. $header_layout);
+        get_template_part('partials/header-'. $header_layout);
         ?>
 
         <?php
@@ -87,7 +80,6 @@
             include_once('wp-content/plugins/nhsl-blocks/blocks/content-hero.php');
         }
         //end hero image section
-
         ?>
         <main class="nhsuk-main-wrapper nhsuk-main-wrapper--no-padding" id="maincontent">
-            <div id="contentinner" class="nhsuk-width-container">
+            <div id="contentinner"<?php if(!(is_home() || is_front_page())): ?> class="nhsuk-width-container"<?php endif; ?>>

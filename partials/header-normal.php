@@ -13,7 +13,6 @@
 
 ?>
 <div class="nhsuk-width-container nhsuk-header__container">
-
     <div class="nhsuk-header__logo">
         <a class="nhsuk-header__link" href="/" aria-label="NHS homepage">
             <svg class="nhsuk-logo nhsuk-logo--white" xmlns="http://www.w3.org/2000/svg" role="presentation" focusable="false" viewBox="0 0 40 16">
@@ -24,10 +23,9 @@
         </a><br>
         <a href="https://www.hee.nhs.uk/" class="nhsuk-header__link nhsuk-logo__tagline"><?php echo get_bloginfo( 'description' ); ?></a>
         <span class="nhsuk-logo__tagline nhsuk-logo__nameline"><?php echo get_bloginfo( 'name' ); ?></span>
-        
     </div>
-    <div class="nhsuk-header__content" id="content-header">
 
+    <div class="nhsuk-header__content" id="content-header">
         <div class="nhsuk-header__menu">
             <button class="nhsuk-header__menu-toggle" id="toggle-menu" aria-controls="header-navigation"
                     aria-label="Open menu">Menu
@@ -37,7 +35,5 @@
         <div class="nhsuk-header__search">
             <?php get_search_form(); ?>
         </div>
-
     </div>
-
 </div>
