@@ -25,8 +25,8 @@
             <div class="nhsuk-review-date">
                 <p class="nhsuk-body-s">
                     <?php
-                    nightingale_posted_by();
-                    nightingale_posted_on();
+                    nightingale_2_0_posted_by();
+                    nightingale_2_0_posted_on();
                     ?>
                 </p>
             </div><!-- .article-meta -->
@@ -34,7 +34,7 @@
     </header><!-- .article-header -->
 
     <?php if ("case-studies" !== get_post_type()): ?>
-        <?php nightingale_post_thumbnail(); ?>
+        <?php nightingale_2_0_post_thumbnail(); ?>
     <?php endif; ?>
 
     <article>

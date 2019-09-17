@@ -19,7 +19,6 @@
             </a>
         </div>
     </div>
-
 <?php else :
-    get_template_part( 'template-parts/content' );
+    get_template_part( 'template-parts/content' , 'case-study');
 endif; ?>
