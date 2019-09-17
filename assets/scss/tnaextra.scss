@@ -122,3 +122,10 @@ details .nhsuk-checkboxes__input + .nhsuk-checkboxes__label::after{
 .nhsuk-logo__nameline {
     font-weight: normal;
 }
+
+
+.case-studies fig.nhsuk-image {
+    float: left;
+    margin: 0 20px 20px 0;
+    width: 33%;
+}
