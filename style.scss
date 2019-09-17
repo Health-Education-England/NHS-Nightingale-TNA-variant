@@ -1,0 +1,47 @@
+/*
+Theme Name:   NHS TNA Theme
+Theme URI:    http://nhstna.oneblackbear.com
+Description:  TNA Theme for NHS
+Author:       Michal Noskovic
+Version:      1.0.0
+License:      Proprietary
+Text Domain:  nhstna-theme
+*/
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Elements
+# Forms
+# Navigation
+	## Links
+	## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+	## Posts and pages
+	## Comments
+# Infinite scroll
+# Media
+	## Captions
+	## Galleries
+--------------------------------------------------------------*/
+@import 'layouts/default';
+// @todo clean this up, its a hangover from underscores that we could do with getting rid of
+@import 'node_modules/nhsuk-frontend/packages/nhsuk';
+// Core (required)
+@import 'node_modules/nhsuk-frontend/packages/core/all';
+
+// start importing the theme specific settings
+
+@import 'assets/scss/generic-overrides'; // generic over-rides to remove default wordpress styling issues
+@import 'assets/scss/nhs-colours'; // nhs colour pallette
+@import 'assets/scss/nhsl-blocks'; // specific elements for nhsl-blocks plugin
+@import 'assets/scss/sidebar-widgets.scss'; // sidebar elements and subpages navigation
+@import 'assets/scss/header'; // header styles
+@import 'assets/scss/style_variations';//gutenberg blocks style variations
+
+@import 'assets/scss/tnaextra'; //extra team stuff

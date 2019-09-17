@@ -1,0 +1,97 @@
+.edit-post-visual-editor { // target only the editor itself
+
+  @import 'node_modules/nhsuk-frontend/packages/nhsuk';
+  @import 'node_modules/nhsuk-frontend/packages/core/settings/all';
+
+  // Tools
+  @import 'node_modules/nhsuk-frontend/packages/core/tools/all';
+
+  // Generic
+  @import 'node_modules/nhsuk-frontend/packages/core/generic/box-sizing';
+  @import 'node_modules/nhsuk-frontend/packages/core/generic/font-face';
+  @import 'node_modules/nhsuk-frontend/packages/core/generic/ie';
+
+  // Elements
+  @import 'node_modules/nhsuk-frontend/packages/core/elements/forms';
+  @import 'node_modules/nhsuk-frontend/packages/core/elements/links';
+//  @import 'node_modules/nhsuk-frontend/packages/core/elements/page';
+  @import 'node_modules/nhsuk-frontend/packages/core/elements/table';
+
+  // Objects
+  @import 'node_modules/nhsuk-frontend/packages/core/objects/form-group';
+  @import 'node_modules/nhsuk-frontend/packages/core/objects/grid';
+  @import 'node_modules/nhsuk-frontend/packages/core/objects/main-wrapper';
+  @import 'node_modules/nhsuk-frontend/packages/core/objects/width-container';
+
+  // Styles
+  @import 'node_modules/nhsuk-frontend/packages/core/styles/icons';
+  @import 'node_modules/nhsuk-frontend/packages/core/styles/lists';
+  @import 'node_modules/nhsuk-frontend/packages/core/styles/section-break';
+  @import 'node_modules/nhsuk-frontend/packages/core/styles/typography';
+
+  // Utilities
+  @import 'node_modules/nhsuk-frontend/packages/core/utilities/clearfix';
+  @import 'node_modules/nhsuk-frontend/packages/core/utilities/grid-widths';
+  @import 'node_modules/nhsuk-frontend/packages/core/utilities/link-nowrap';
+  @import 'node_modules/nhsuk-frontend/packages/core/utilities/reading-width';
+  @import 'node_modules/nhsuk-frontend/packages/core/utilities/spacing';
+  @import 'node_modules/nhsuk-frontend/packages/core/utilities/typography';
+  @import 'node_modules/nhsuk-frontend/packages/core/utilities/visually-hidden';
+  @import 'node_modules/nhsuk-frontend/packages/core/utilities/widths';
+
+  @import 'assets/scss/style_variations';//gutenberg blocks style variations
+  .acf-block-component {
+    a {
+      pointer-events: none;
+      cursor: default;
+      // this has been added on purpose to prevent links in blocks being clickable - its really annoying when editing to accidentally click a link and be taken off the edit screen!
+    }
+  }
+  background-color: $color_nhsuk-grey-5;
+  .wp-block{
+    max-width: 800px;
+  }
+  .wp-block[data-align=wide] { /* it can be "data-align=full" and also "right", "left" and "center" */
+    max-width: 1228px;
+  }
+  .block-editor-block-list__block {
+    font-family: $nhsuk-font, $nhsuk-font-fallback;
+    font-size: 16px;
+
+    .nhsuk-care-card__heading{
+      span {
+        font-size: 24px;
+        color: $color_nhsuk-white;
+      }
+    }
+  }
+  // start importing the theme specific settings
+
+  @import 'assets/scss/generic-overrides'; // generic over-rides to remove default wordpress styling issues
+  @import 'assets/scss/nhs-colours'; // nhs colour pallette
+  @import 'assets/scss/nhsl-blocks'; // specific elements for nhsl-blocks plugin
+  .editor-post-title__input {
+    font-family: $nhsuk-font, $nhsuk-font-fallback;;
+    @extend h1;
+  }
+}
+//promo panel blockquote address button
+.nhsuk-promo__content {
+  .editor-inner-blocks {
+    .editor-block-list__block ~ .block-list-appender {
+      display: none;
+    }
+  }
+  .editor-inserter {
+    button {
+      width: 20px;
+      height: 20px;
+      padding-top: 0;
+    }
+  };
+  .editor-url-input__button {
+    width: 0;
+    height: 0;
+    float: right;
+  }
+}
