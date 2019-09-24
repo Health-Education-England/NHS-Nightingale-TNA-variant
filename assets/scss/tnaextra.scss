@@ -1,3 +1,7 @@
+.text-center {
+    text-align: center;
+}
+
 .homepage-vacancies {
     .nhsuk-summary-list__row {
         display: block;
@@ -8,6 +12,18 @@
             padding-left: 0;
             padding-right: 0;
         }
+    }
+
+    .nhsuk-action-link__link:hover,
+    .nhsuk-action-link__link:focus {
+        box-shadow: none;
+    }
+}
+
+#nhs-feed {
+    .nhsuk-action-link__link:hover,
+    .nhsuk-action-link__link:focus {
+        box-shadow: none;
     }
 }
 
