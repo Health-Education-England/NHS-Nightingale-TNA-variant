@@ -11297,6 +11297,10 @@ b {
   background-image: url("assets/cross.svg");
 }
 
+.text-center {
+  text-align: center;
+}
+
 .homepage-vacancies .nhsuk-summary-list__row {
   display: block;
 }
@@ -11306,6 +11310,16 @@ b {
   display: block;
   padding-left: 0;
   padding-right: 0;
+}
+
+.homepage-vacancies .nhsuk-action-link__link:hover,
+.homepage-vacancies .nhsuk-action-link__link:focus {
+  box-shadow: none;
+}
+
+#nhs-feed .nhsuk-action-link__link:hover,
+#nhs-feed .nhsuk-action-link__link:focus {
+  box-shadow: none;
 }
 
 .nhsuk-grid__item {
