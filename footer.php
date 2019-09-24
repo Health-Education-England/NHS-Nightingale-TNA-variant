@@ -41,7 +41,7 @@
                          ?>
                     </ul>
                 <?php } //end if footer menu exists ?>
-                <p class="nhsuk-footer__copyright">&copy; Copyright, <?php bloginfo('name'); ?> <?php echo date("Y"); ?></p>
+                <p class="nhsuk-footer__copyright">&copy; Copyright, Health Education England <?php echo date("Y"); ?></p>
             </div>
         </div>
     </footer>
