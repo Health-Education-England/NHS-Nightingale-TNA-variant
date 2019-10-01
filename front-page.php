@@ -70,14 +70,14 @@ get_header();
         </div>
     </section>
 
-    <section class="nhsuk-grid-row white-row">
+    <!-- <section class="nhsuk-grid-row white-row">
         <div class="nhsuk-width-container">
-            <?php query_posts('post_type=faqs&posts_per_page=6'); if ( have_posts() ) : ?>
+            <?php // query_posts('post_type=faqs&posts_per_page=6'); if ( have_posts() ) : ?>
                 <div class="nhsuk-grid__item nhsuk-grid-column-full">
                     <h2>FAQs</h2>
-                    <?php while ( have_posts() ) : the_post();
-                        get_template_part( 'partials/blocks', get_post_type() );
-                    endwhile; ?>
+                    <?php // while ( have_posts() ) : the_post();
+                       // get_template_part( 'partials/blocks', get_post_type() );
+                    // endwhile; ?>
 
                     <br>
                     <div class="nhsuk-action-link text-center">
@@ -90,9 +90,9 @@ get_header();
                         </a>
                     </div>
                 </div>
-            <?php endif; wp_reset_query(); ?>
+            <?php // endif; wp_reset_query(); ?>
         </div>
-    </section>
+    </section> -->
 
     <section class="nhsuk-grid-row">
         <div class="nhsuk-width-container">
