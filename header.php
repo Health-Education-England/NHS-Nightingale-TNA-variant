@@ -15,9 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="https://gmpg.org/xfn/11">
     <meta name="theme-color" content="#005eb8">
-
-    <link href="<?php echo get_bloginfo('template_directory'); ?>/style.css" rel="stylesheet">
-
+    
     <?php wp_head(); ?>
 </head>
 <body class="js-enabled">
