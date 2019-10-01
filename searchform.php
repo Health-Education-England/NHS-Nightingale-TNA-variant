@@ -24,7 +24,7 @@ if (!empty(get_search_query())) {
 <div class="nhsuk-header__search-wrap" id="wrap-search">
     <form class="nhsuk-header__search-form" id="searchform" action="<?php echo home_url( '/' ); ?>" method="get"
           role="search">
-        <label class="nhsuk-u-visually-hidden" for="ss">Search this NHS website</label>
+        <label class="nhsuk-u-visually-hidden" for="search">Search this NHS website</label>
         <div class="autocomplete-container" id="autocomplete-container"><div class="autocomplete__wrapper"
                                                                              role="combobox"
                                                                              aria-expanded="false"><div
@@ -33,7 +33,7 @@ if (!empty(get_search_query())) {
                         0px; position: absolute; white-space: nowrap; width: 1px;">Type in 2 or more characters for
                     results.<span>,,</span></div><input aria-owns="search-field__listbox" autocomplete="off"
                                                         class="autocomplete__input autocomplete__input--default"
-                                                        id="ss" name="s" placeholder="<?php echo $query; ?>"
+                                                        id="search" name="s" placeholder="<?php echo $query; ?>"
                                                         type="text"><ul class="autocomplete__menu autocomplete__menu--inline autocomplete__menu--hidden" id="search-field__listbox" role="listbox" style="width: 279px; top: 92px;"></ul></div></div>
 
         <button class="nhsuk-search__submit" type="submit">
