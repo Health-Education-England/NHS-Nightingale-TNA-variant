@@ -143,9 +143,14 @@ details .nhsuk-checkboxes__input + .nhsuk-checkboxes__label::after{
     font-weight: normal;
 }
 
-
-.case-studies fig.nhsuk-image {
-    float: left;
-    margin: 0 20px 20px 0;
-    width: 33%;
+.case-studies {
+    fig.nhsuk-image {
+        float: left;
+        margin: 0 20px 20px 0;
+        width: 33%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        clear: none;
+    }
 }
+
