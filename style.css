@@ -11356,6 +11356,10 @@ details .nhsuk-checkboxes__input + .nhsuk-checkboxes__label::after {
   width: 18px;
 }
 
+.nhsuk-details.hidden {
+  display: none;
+}
+
 .nhsuk-fieldset__legend {
   margin-bottom: 0;
 }
@@ -11435,4 +11439,8 @@ details .nhsuk-checkboxes__input + .nhsuk-checkboxes__label::after {
   float: left;
   margin: 0 20px 20px 0;
   width: 33%;
+}
+
+.case-studies h1, .case-studies h2, .case-studies h3, .case-studies h4, .case-studies h5, .case-studies h6 {
+  clear: none;
 }
