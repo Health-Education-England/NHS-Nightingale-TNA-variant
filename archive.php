@@ -35,7 +35,7 @@ get_header();
                         <form method="get" action="" id="faqsearch" class="nhsuk-header__search-form">
                             <div class="autocomplete-container" id="autocomplete-container">
                                 <div class="autocomplete__wrapper" role="combobox" aria-expanded="false">
-                                    <input type='search' placeholder="Search FAQs" class="search-field__listbox">
+                                    <input type='search' placeholder="Search FAQs" class="search-field__listbox autocomplete__input">
                                 </div>
                             </div>
                             <button class="nhsuk-search__submit" type="submit">
