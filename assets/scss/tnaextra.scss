@@ -65,6 +65,10 @@ details .nhsuk-checkboxes__input + .nhsuk-checkboxes__label::after{
     width: 18px;
 }
 
+.nhsuk-details.hidden {
+    display:none;
+}
+
 .nhsuk-fieldset__legend {
     margin-bottom: 0;
 }
