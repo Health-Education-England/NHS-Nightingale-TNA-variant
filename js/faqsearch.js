@@ -3,12 +3,9 @@ jQuery(document).ready(function(){
 
 	if(form.length){
 		var listing = jQuery(".faqslisting > details");
-		console.log(listing);
 		form.on('input',function(e){
 			var input = e.target.value;
-
 			filterItems(input);
-
 		});
 
 		function filterItems(filter){
