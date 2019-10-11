@@ -40,7 +40,7 @@ get_header();
         </div>
     </section>
 
-    <section class="nhsuk-grid-row">
+    <section class="nhsuk-grid-row white-row">
         <div class="nhsuk-width-container">
             <?php
                 $message_content = get_field('message_content');
