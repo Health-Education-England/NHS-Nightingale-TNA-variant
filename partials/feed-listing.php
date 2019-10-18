@@ -8,14 +8,14 @@
                     <h2 class="nhsuk-promo__heading"><?php echo isset($homepage) ? $vacancy->job_title : $vacancy->job_title . ' - ' . $vacancy->job_reference ;?></h2>
 
                     <?php /* "job_type", "job_employer", "job_staff_group",  "job_postdate", "job_staff_group", "job_employer" */ ?>
-                    <div class="nhsuk-summary-list">
+                    <dl class="nhsuk-summary-list">
                         <?php foreach(["job_location", "job_salary"] as $summary) :?>
                             <div class="nhsuk-summary-list__row">
                                 <dt class="nhsuk-summary-list__key"><?php echo ucfirst(str_replace(['job_', '_'], ['', ' '], $summary)); ?></dt>
                                 <dd class="nhsuk-summary-list__value"><?php echo $vacancy->{$summary}; ?></dd>
                             </div>
                         <?php endforeach; ?>
-                    </div>
+                    </dl>
 
                     <div class="nhsuk-action-link">
                         <span class="nhsuk-action-link__link">
