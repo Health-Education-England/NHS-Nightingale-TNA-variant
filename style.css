@@ -11416,7 +11416,6 @@ details .nhsuk-checkboxes__input + .nhsuk-checkboxes__label::after {
 
 .nhsuk-header--transactional .nhsuk-logo {
   display: block;
-  width: auto;
   height: 25px;
 }
 
