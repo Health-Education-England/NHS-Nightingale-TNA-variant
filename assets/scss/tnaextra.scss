@@ -53,7 +53,7 @@ section.nhsuk-grid-row{
 }
 
 .nhsuk-checkboxes__item {
-    .hidden {
+    &.hidden {
         display: none;
     }
 
