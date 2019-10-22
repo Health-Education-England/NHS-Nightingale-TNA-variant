@@ -11347,7 +11347,7 @@ section.nhsuk-grid-row.white-row {
   height: 400px;
 }
 
-.nhsuk-checkboxes__item .hidden {
+.nhsuk-checkboxes__item.hidden {
   display: none;
 }
 
