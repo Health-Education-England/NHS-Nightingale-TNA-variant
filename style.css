@@ -11443,3 +11443,17 @@ details .nhsuk-checkboxes__input + .nhsuk-checkboxes__label::after {
 .case-studies h1, .case-studies h2, .case-studies h3, .case-studies h4, .case-studies h5, .case-studies h6 {
   clear: none;
 }
+
+@media (max-width: 40.0525em) {
+  .partners {
+    width: 70%;
+    margin: 0 auto 30px;
+  }
+}
+
+@media (min-width: 40.0625em) {
+  .partners {
+    width: 50%;
+    margin: 0 auto 30px;
+  }
+}
