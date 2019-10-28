@@ -153,3 +153,13 @@ details .nhsuk-checkboxes__input + .nhsuk-checkboxes__label::after{
     }
 }
 
+.partners {
+    @include mq($until: tablet) {
+        width: 70%;
+        margin: 0 auto 30px;
+    }
+    @include mq(tablet) {
+        width: 50%;
+        margin: 0 auto 30px;
+    }
+}
