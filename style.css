@@ -11451,7 +11451,7 @@ details .nhsuk-checkboxes__input + .nhsuk-checkboxes__label::after {
   }
 }
 
-@media (min-width: 40.0625em) {
+@media (min-width: 40.0625em) and (max-width: 48.0525em) {
   .partners {
     width: 50%;
     margin: 0 auto 30px;
