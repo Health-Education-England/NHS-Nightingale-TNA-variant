@@ -158,7 +158,7 @@ details .nhsuk-checkboxes__input + .nhsuk-checkboxes__label::after{
         width: 70%;
         margin: 0 auto 30px;
     }
-    @include mq(tablet) {
+    @include mq(tablet, $until: desktop) {
         width: 50%;
         margin: 0 auto 30px;
     }
