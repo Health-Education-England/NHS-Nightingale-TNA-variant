@@ -40,6 +40,93 @@ get_header();
         </div>
     </section>
 
+
+
+    <!-- <section class="nhsuk-grid-row white-row">
+        <div class="nhsuk-width-container">
+            <?php // query_posts('post_type=faqs&posts_per_page=6'); if ( have_posts() ) : ?>
+                <div class="nhsuk-grid__item nhsuk-grid-column-full">
+                    <h2>FAQs</h2>
+                    <?php // while ( have_posts() ) : the_post();
+                       // get_template_part( 'partials/blocks', get_post_type() );
+                    // endwhile; ?>
+
+                    <br>
+                    <div class="nhsuk-action-link text-center">
+                        <a class="nhsuk-action-link__link" href="/faqs/">
+                            <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
+                            </svg>
+                            <span class="nhsuk-action-link__text">View all FAQs</span>
+                        </a>
+                    </div>
+                </div>
+            <?php // endif; wp_reset_query(); ?>
+        </div>
+    </section> -->
+
+
+    <section class="nhsuk-grid-row white-row">
+        <div class="nhsuk-width-container">
+            <?php query_posts('post_type=case-studies&posts_per_page=3'); if ( have_posts() ) :?>
+                <div class="nhsuk-grid__item nhsuk-grid-column-full">
+                    <h2>Latest Case Studies</h2>
+                    <?php get_template_part( 'partials/blocks' ); ?>
+
+                    <div class="nhsuk-action-link text-center">
+                        <a class="nhsuk-action-link__link" href="case-studies/">
+                            <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
+                            </svg>
+                            <span class="nhsuk-action-link__text">View all Case Studies</span>
+                        </a>
+                    </div>
+                </div>
+            <?php endif; ?>
+        </div>
+    </section>
+
+    <section class="nhsuk-grid-row">
+        <div class="nhsuk-width-container">
+            <?php
+                if( function_exists( '_fetchVacancies' ) ){
+
+                    $feed_vacancies = _fetchVacancies();
+
+                }elseif( function_exists( 'NHS_JOBS\ADMIN\Feed\_fetchVacancies' ) ){
+
+                    $feed_vacancies = NHS_JOBS\ADMIN\Feed\_fetchVacancies();
+
+                }else{
+                    $feed_vacancies = '';
+                }
+                
+                $homepage = true;
+
+                if ($feed_vacancies && ($vacancies = $feed_vacancies->vacancy_details) && count($vacancies)) :
+            ?>
+                <div class="nhsuk-grid__item nhsuk-grid-column-full">
+                    <h2>Latest Vacancies</h2>
+                    <div class="nhsuk-grid-row nhsuk-promo-group homepage-vacancies">
+                        <?php include(locate_template('partials/feed-listing.php')); ?>
+                    </div>
+
+                    <div class="nhsuk-action-link text-center">
+                        <a class="nhsuk-action-link__link" href="vacancies/">
+                            <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
+                            </svg>
+                            <span class="nhsuk-action-link__text">View all Vacancies</span>
+                        </a>
+                    </div>
+                </div>
+            <?php endif; ?>
+        </div>
+    </section>
+
     <section class="nhsuk-grid-row white-row">
         <div class="nhsuk-width-container">
             <?php
@@ -70,78 +157,7 @@ get_header();
         </div>
     </section>
 
-    <!-- <section class="nhsuk-grid-row white-row">
-        <div class="nhsuk-width-container">
-            <?php // query_posts('post_type=faqs&posts_per_page=6'); if ( have_posts() ) : ?>
-                <div class="nhsuk-grid__item nhsuk-grid-column-full">
-                    <h2>FAQs</h2>
-                    <?php // while ( have_posts() ) : the_post();
-                       // get_template_part( 'partials/blocks', get_post_type() );
-                    // endwhile; ?>
 
-                    <br>
-                    <div class="nhsuk-action-link text-center">
-                        <a class="nhsuk-action-link__link" href="/faqs/">
-                            <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-                                <path d="M0 0h24v24H0z" fill="none"></path>
-                                <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
-                            </svg>
-                            <span class="nhsuk-action-link__text">View all FAQs</span>
-                        </a>
-                    </div>
-                </div>
-            <?php // endif; wp_reset_query(); ?>
-        </div>
-    </section> -->
-
-    <section class="nhsuk-grid-row">
-        <div class="nhsuk-width-container">
-            <?php
-                $feed_vacancies = _fetchVacancies();
-                $homepage = true;
-
-                if ($feed_vacancies && ($vacancies = $feed_vacancies->vacancy_details) && count($vacancies)) :
-            ?>
-                <div class="nhsuk-grid__item nhsuk-grid-column-full">
-                    <h2>Latest Vacancies</h2>
-                    <div class="nhsuk-grid-row nhsuk-promo-group homepage-vacancies">
-                        <?php include(locate_template('partials/feed-listing.php')); ?>
-                    </div>
-
-                    <div class="nhsuk-action-link text-center">
-                        <a class="nhsuk-action-link__link" href="/vacancies/">
-                            <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-                                <path d="M0 0h24v24H0z" fill="none"></path>
-                                <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
-                            </svg>
-                            <span class="nhsuk-action-link__text">View all Vacancies</span>
-                        </a>
-                    </div>
-                </div>
-            <?php endif; ?>
-        </div>
-    </section>
-
-    <section class="nhsuk-grid-row white-row">
-        <div class="nhsuk-width-container">
-            <?php query_posts('post_type=case-studies&posts_per_page=3'); if ( have_posts() ) :?>
-                <div class="nhsuk-grid__item nhsuk-grid-column-full">
-                    <h2>Latest Case Studies</h2>
-                    <?php get_template_part( 'partials/blocks' ); ?>
-
-                    <div class="nhsuk-action-link text-center">
-                        <a class="nhsuk-action-link__link" href="/case-studies/">
-                            <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-                                <path d="M0 0h24v24H0z" fill="none"></path>
-                                <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
-                            </svg>
-                            <span class="nhsuk-action-link__text">View all Case Studies</span>
-                        </a>
-                    </div>
-                </div>
-            <?php endif; ?>
-        </div>
-    </section>
 
     <section class="nhsuk-grid-row">
         <div class="nhsuk-width-container">

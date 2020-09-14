@@ -972,7 +972,7 @@ section {
    ELEMENTS / #FORMS
    ========================================================================== */
 /**
- * Make sure our form elements donâ€™t use any UA-specific font styles: we want
+ * Make sure our form elements don’t use any UA-specific font styles: we want
  * them to use ours. This may need reverting as more design information becomes
  * available, and we start putting together more complete forms.
  */
@@ -1297,7 +1297,7 @@ caption {
  * Original code taken from GDS (Government Digital Service)
  * https://github.com/alphagov/govuk-frontend
  *
- * 1. In IE11 the `main` element can be used, but is not recognized  â€“
+ * 1. In IE11 the `main` element can be used, but is not recognized  –
  *    meaning it's not defined in IE's default style sheet,
  *    so it uses CSS initial value, which is inline.
  */
@@ -9334,7 +9334,7 @@ section {
    ELEMENTS / #FORMS
    ========================================================================== */
 /**
- * Make sure our form elements donâ€™t use any UA-specific font styles: we want
+ * Make sure our form elements don’t use any UA-specific font styles: we want
  * them to use ours. This may need reverting as more design information becomes
  * available, and we start putting together more complete forms.
  */
@@ -9576,7 +9576,7 @@ caption {
  * Original code taken from GDS (Government Digital Service)
  * https://github.com/alphagov/govuk-frontend
  *
- * 1. In IE11 the `main` element can be used, but is not recognized  â€“
+ * 1. In IE11 the `main` element can be used, but is not recognized  –
  *    meaning it's not defined in IE's default style sheet,
  *    so it uses CSS initial value, which is inline.
  */
@@ -11416,7 +11416,6 @@ details .nhsuk-checkboxes__input + .nhsuk-checkboxes__label::after {
 
 .nhsuk-header--transactional .nhsuk-logo {
   display: block;
-  height: 25px;
 }
 
 .nhsuk-logo__tagline {

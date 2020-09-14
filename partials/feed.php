@@ -1,5 +1,19 @@
 <?php
-$feed_data = _fetchVacancies();
+
+if( function_exists( '_fetchVacancies' ) ){
+
+    $feed_data = _fetchVacancies();
+
+}elseif( function_exists( 'NHS_JOBS\ADMIN\Feed\_fetchVacancies' ) ){
+
+    $feed_data = NHS_JOBS\ADMIN\Feed\_fetchVacancies();
+    
+}else{
+
+    $feed_vacancies = '';
+    
+}
+
 $vacancies = $feed_data->vacancy_details;
 
 $filters = [
